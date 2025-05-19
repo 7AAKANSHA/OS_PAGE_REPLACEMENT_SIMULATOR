@@ -1,0 +1,143 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #f0f3ff, #e4ebf9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.container {
+    background-color: white;
+    padding: 40px 40px 30px;
+    border-radius: 20px;
+    max-width: 1100px;
+    width: 95%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-top: -5px;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #f9fafe;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 210px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card i {
+    font-size: 26px;
+    color: #007bff;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    margin: 10px 0 6px;
+    font-size: 18px;
+}
+
+.card p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    min-width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.card a:hover {
+    background-color: #0056b3;
+}
+
+.how-it-works {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.how-it-works ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+
+.how-it-works ul li {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: auto;
+    }
+    .card-grid {
+        gap: 16px;
+    }
+    .how-it-works ul {
+        align-items: center;
+        text-align: center;
+    }
+}

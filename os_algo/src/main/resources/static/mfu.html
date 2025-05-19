@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Replacement Simulator</title>
+    <link rel="stylesheet" href="fifo.css">
+</head>
+<body>
+<div class="container">
+    <h1>Page Replacement Simulator</h1>
+    <div class="header-flex">
+        <h1>Most Frequently Used Algorithm </h1>
+        <a href="index.html">
+            <button class="home-btn">🏠 Home</button>
+        </a>
+    </div>
+
+    <div class="input-row">
+        <div class="input-group">
+            <label for="frameSizeInput">Number of Frames</label>
+            <input type="number" id="frameSizeInput" value="3" min="1">
+        </div>
+
+        <div class="input-group">
+            <label for="pagesInput">Reference String</label>
+            <input type="text" id="pagesInput" placeholder="e.g., 1 2 3 4 1 2 5 1">
+        </div>
+
+        <div class="input-group">
+            <label>&nbsp;</label>
+            <button onclick="runmfu()">Run Simulation</button>
+        </div>
+    </div>
+
+    <div id="resultSection"></div>
+
+    <div class="about-section">
+        <h2>📘 About MFU (Most Frequently Used)</h2>
+        <p>
+            <strong>MFU (Most Frequently Used)</strong> is the opposite of LFU — it removes the page that has been accessed the most.
+            It assumes that a heavily used page has already done its job and may not be needed again soon.
+        </p>
+        <ul>
+            <li>📈 Tracks how often each page is used</li>
+            <li>🚫 Replaces the most frequently used page</li>
+            <li>🧪 More of a theoretical comparison algorithm</li>
+            <li>🛠 Rare in real systems, but interesting for analysis</li>
+            <li>⚠️ Can be less efficient than LFU in many workloads</li>
+            <li>🎓 Helpful in studying behavior contrast with LRU and LFU</li>
+        </ul>
+
+    </div>
+</div>
+
+<script src="mfu.js"></script>
+</body>
+</html>

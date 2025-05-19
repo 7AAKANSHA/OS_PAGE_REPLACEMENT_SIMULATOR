@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Page Replacement Simulator</title>
+    <link rel="stylesheet" href="optimal.css">
+</head>
+<body>
+<div class="container">
+    <h1>Page Replacement Simulator</h1>
+    <div class="header-flex">
+        <h1>Optimal Page Replacement Algorithm</h1>
+        <a href="index.html">
+            <button class="home-btn">🏠 Home</button>
+        </a>
+    </div>
+    <div class="input-row">
+        <div class="input-group">
+            <label for="frameSizeInput">Number of Frames</label>
+            <input type="number" id="frameSizeInput" value="3" min="1">
+        </div>
+
+        <div class="input-group">
+            <label for="pagesInput">Reference String</label>
+            <input type="text" id="pagesInput" placeholder="e.g., 7 0 1 2 0 3 0 4">
+        </div>
+
+        <div class="input-group">
+            <label>&nbsp;</label>
+            <button onclick="runOptimal()">Run Simulation</button>
+        </div>
+    </div>
+
+    <div id="resultSection"></div>
+
+    <div class="about-section">
+        <h2>📘 About Optimal</h2>
+        <p>
+            <strong>Optimal Page Replacement</strong> replaces the page that will not be used for the longest period of time in the future.
+        </p>
+        <ul>
+            <li>🔮 Looks ahead to predict future use</li>
+            <li>⚙️ Replaces page with farthest next use</li>
+            <li>📉 Ideal but impractical in real systems</li>
+        </ul>
+
+    </div>
+</div>
+
+<script src="optimal.js"></script>
+</body>
+</html>

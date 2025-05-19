@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clock Page Replacement Simulator</title>
+    <link rel="stylesheet" href="fifo.css">
+</head>
+<body>
+<div class="container">
+    <h1>Page Replacement Simulator</h1>
+    <div class="header-flex">
+        <h1>Clock Page Replacement </h1>
+        <a href="index.html">
+            <button class="home-btn">🏠 Home</button>
+        </a>
+    </div>
+    <div class="input-row">
+        <div class="input-group">
+            <label for="frameSizeInput">Number of Frames</label>
+            <input type="number" id="frameSizeInput" value="3" min="1" required/>
+        </div>
+
+        <div class="input-group">
+            <label for="pagesInput">Reference String</label>
+            <input type="text" id="pagesInput" placeholder="e.g., 7 0 1 2 0 3 0 4">
+        </div>
+
+        <div class="input-group">
+            <label>&nbsp;</label>
+            <button onclick="runclock()">Run Simulation</button>
+        </div>
+    </div>
+
+    <div id="resultSection"></div>
+
+    <div class="about-section">
+        <h2>🕒 About Clock Page Replacement</h2>
+        <p>
+            <strong>Clock Page Replacement</strong> is an approximation of LRU that uses a circular buffer (like a clock). Each page has a reference bit.
+            When a page needs to be replaced, the algorithm scans like the hand of a clock to find a page with a 0 bit, giving second chances to pages recently used.
+        </p>
+        <ul>
+            <li>🔁 Uses a circular queue (clock hand) to track frames</li>
+            <li>⚙️ Reference bits determine whether a page gets a second chance</li>
+            <li>🧠 Less overhead than LRU, but still efficient</li>
+            <li>📍 Used in OS kernels like Linux and Windows (as "Second-Chance")</li>
+            <li>📉 Doesn't need future knowledge like Optimal</li>
+        </ul>
+
+    </div>
+</div>
+
+<script src="clock.js"></script>
+</body>
+</html>
